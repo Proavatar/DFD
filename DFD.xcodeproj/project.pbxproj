@@ -14,6 +14,7 @@
 		B6B1E21F299FA70000C2F281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B1E21E299FA70000C2F281 /* Assets.xcassets */; };
 		B6B1E222299FA70000C2F281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B1E220299FA70000C2F281 /* LaunchScreen.storyboard */; };
 		B6B1E22B299FA9F400C2F281 /* DataflowDiagramSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B6B1E22A299FA9F400C2F281 /* DataflowDiagramSDK */; };
+		B6B1E22D299FAAD200C2F281 /* FileProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1E22C299FAAD200C2F281 /* FileProcessing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		B6B1E21E299FA70000C2F281 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6B1E221299FA70000C2F281 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6B1E223299FA70000C2F281 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B6B1E22C299FAAD200C2F281 /* FileProcessing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileProcessing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				B6B1E21E299FA70000C2F281 /* Assets.xcassets */,
 				B6B1E220299FA70000C2F281 /* LaunchScreen.storyboard */,
 				B6B1E223299FA70000C2F281 /* Info.plist */,
+				B6B1E22C299FAAD200C2F281 /* FileProcessing.swift */,
 			);
 			path = DFD;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B1E22D299FAAD200C2F281 /* FileProcessing.swift in Sources */,
 				B6B1E21A299FA6FE00C2F281 /* ViewController.swift in Sources */,
 				B6B1E216299FA6FE00C2F281 /* AppDelegate.swift in Sources */,
 				B6B1E218299FA6FE00C2F281 /* SceneDelegate.swift in Sources */,
