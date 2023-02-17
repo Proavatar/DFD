@@ -63,7 +63,7 @@ func getFileList( extensionString : String ) -> [String]
         FileManager.SearchPathDirectory.documentDirectory,
         FileManager.SearchPathDomainMask.userDomainMask, true)[0]
     
-    var fileList = try! FileManager.default.contentsOfDirectory(atPath: documentsPath)
+    let fileList = try! FileManager.default.contentsOfDirectory(atPath: documentsPath)
     
     return fileList.filter { $0.hasSuffix(extensionString) }
 }

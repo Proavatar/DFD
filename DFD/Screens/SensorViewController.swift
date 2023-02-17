@@ -106,16 +106,16 @@ class SensorViewController: UIViewController
         let updatesDictionary : [String:Any] = ["Orientation": orientation, "Acceleration": acceleration]
         let diagramInput = DataflowDiagramInput(timestamp: timestamp, updates: updatesDictionary)
         
-        diagram.updateInputStreams( diagramInput )
+        dataflowControl.diagram.updateInputStreams( diagramInput )
         dataflowControl.diagramInputs.append( diagramInput )
     }
     
     // --------------------------------------------------------------------------------------------
     func newDiagramOutput(_ diagramOutput: DataflowDiagramOutput )
     {
-        for name in dataflowControl.diagramOutputs.outputs.keys
+        for name in diagramOutput.outputs.keys
         {
-            let value = diagramOutput.outputs[name]
+            let value = diagramOutput.outputs[name]!
             let valueString = getValueString( value )
             diagramOutputTextView.text.append( "\(diagramOutput.timestamp),\(name),\(valueString)\n" )
         }
@@ -124,7 +124,8 @@ class SensorViewController: UIViewController
     // --------------------------------------------------------------------------------------------
     func createRecording()
     {
-        let jsonLines = createJsonLines( dataflowControl.diagramInputs )
+        //let timeOffset = dataflowControl.diagramInputs[0].
+        let jsonLines = createJsonLines( from: dataflowControl.diagramInputs )
         let filename = getDataFilename()
         writeStringToFile( filename: filename, contents: jsonLines )
     }
