@@ -5,11 +5,13 @@
 //  Created by Fred Dijkstra on 17/02/2023.
 //
 
+// ------------------------------------------------------------------------------------------------
 import UIKit
 import DataflowDiagramSDK
 import CoreMotion
 import simd
 
+// ------------------------------------------------------------------------------------------------
 let updateRate : Double = 60.0
 
 // ------------------------------------------------------------------------------------------------
@@ -56,7 +58,6 @@ class SensorViewController: UIViewController
         startTimestamp =  CFAbsoluteTimeGetCurrent()
         startMotionTracking()
         recording = true
-        
     }
     
     // --------------------------------------------------------------------------------------------
@@ -111,8 +112,9 @@ class SensorViewController: UIViewController
     }
     
     // --------------------------------------------------------------------------------------------
-    func newDiagramOutput(_ diagramOutput: DataflowDiagramOutput )
+    func newDiagramOutput()
     {
+        let diagramOutput = dataflowControl.diagramOutputs.last!
         for name in diagramOutput.outputs.keys
         {
             let value = diagramOutput.outputs[name]!
@@ -124,11 +126,14 @@ class SensorViewController: UIViewController
     // --------------------------------------------------------------------------------------------
     func createRecording()
     {
-        //let timeOffset = dataflowControl.diagramInputs[0].
+        let timeOffset = dataflowControl.diagramInputs[0].timestamp
+        for i in 0..<dataflowControl.diagramOutputs.count
+        {
+            dataflowControl.diagramOutputs[i].timestamp -= timeOffset
+        }
+
         let jsonLines = createJsonLines( from: dataflowControl.diagramInputs )
         let filename = getDataFilename()
         writeStringToFile( filename: filename, contents: jsonLines )
     }
-    
-
 }

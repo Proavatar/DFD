@@ -5,6 +5,7 @@
 //  Created by Fred Dijkstra on 17/02/2023.
 //
 
+// ------------------------------------------------------------------------------------------------
 import UIKit
 import DataflowDiagramSDK
 
@@ -31,9 +32,7 @@ class ProcessViewController: UIViewController
     // --------------------------------------------------------------------------------------------
     @IBAction func processButtonPressed(_ sender: Any)
     {
-        let diagramInputs = dataflowControl.diagramInputs
-        
-        dataflowControl.diagram.processAllUpdates( diagramInputs: diagramInputs )
+        dataflowControl.diagram.processAllUpdates( diagramInputs: dataflowControl.diagramInputs )
     }
     
     // --------------------------------------------------------------------------------------------

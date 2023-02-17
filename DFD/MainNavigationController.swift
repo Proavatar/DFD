@@ -28,7 +28,7 @@ class MainNavigationController: UINavigationController, VariableOutputUpdatesRec
     func newVariableOutputUpdates(_ output: DataflowDiagramOutput  )
     {
         dataflowControl.diagramOutputs.append( output )
-        sensorViewController.newDiagramOutput( output )
+        sensorViewController.newDiagramOutput()
     }
     
     // --------------------------------------------------------------------------------------------
