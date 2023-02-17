@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "dataflowdiagramsdk",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Proavatar/DataflowDiagramSDK.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b1084a4109454ce0a4c70c62b8b62a45fe390791"
+      }
+    }
+  ],
+  "version" : 2
+}

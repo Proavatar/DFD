@@ -13,6 +13,7 @@
 		B6B1E21D299FA6FE00C2F281 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B1E21B299FA6FE00C2F281 /* Main.storyboard */; };
 		B6B1E21F299FA70000C2F281 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B1E21E299FA70000C2F281 /* Assets.xcassets */; };
 		B6B1E222299FA70000C2F281 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6B1E220299FA70000C2F281 /* LaunchScreen.storyboard */; };
+		B6B1E22B299FA9F400C2F281 /* DataflowDiagramSDK in Frameworks */ = {isa = PBXBuildFile; productRef = B6B1E22A299FA9F400C2F281 /* DataflowDiagramSDK */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6B1E22B299FA9F400C2F281 /* DataflowDiagramSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +85,9 @@
 			dependencies = (
 			);
 			name = DFD;
+			packageProductDependencies = (
+				B6B1E22A299FA9F400C2F281 /* DataflowDiagramSDK */,
+			);
 			productName = DFD;
 			productReference = B6B1E212299FA6FE00C2F281 /* DFD.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +116,9 @@
 				Base,
 			);
 			mainGroup = B6B1E209299FA6FE00C2F281;
+			packageReferences = (
+				B6B1E229299FA9F400C2F281 /* XCRemoteSwiftPackageReference "DataflowDiagramSDK" */,
+			);
 			productRefGroup = B6B1E213299FA6FE00C2F281 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6B1E229299FA9F400C2F281 /* XCRemoteSwiftPackageReference "DataflowDiagramSDK" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Proavatar/DataflowDiagramSDK.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6B1E22A299FA9F400C2F281 /* DataflowDiagramSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6B1E229299FA9F400C2F281 /* XCRemoteSwiftPackageReference "DataflowDiagramSDK" */;
+			productName = DataflowDiagramSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6B1E20A299FA6FE00C2F281 /* Project object */;
 }
