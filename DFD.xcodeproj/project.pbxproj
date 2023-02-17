@@ -11,6 +11,7 @@
 		B60DB870299FB0DF00E69F81 /* DiagramsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DB86F299FB0DF00E69F81 /* DiagramsViewController.swift */; };
 		B60DB872299FB2B000E69F81 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DB871299FB2B000E69F81 /* DataViewController.swift */; };
 		B60DB875299FB57200E69F81 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DB874299FB57200E69F81 /* ProcessViewController.swift */; };
+		B60DB877299FB7D600E69F81 /* SensorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B60DB876299FB7D600E69F81 /* SensorViewController.swift */; };
 		B6B1E216299FA6FE00C2F281 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1E215299FA6FE00C2F281 /* AppDelegate.swift */; };
 		B6B1E218299FA6FE00C2F281 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1E217299FA6FE00C2F281 /* SceneDelegate.swift */; };
 		B6B1E21A299FA6FE00C2F281 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B1E219299FA6FE00C2F281 /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 		B60DB86F299FB0DF00E69F81 /* DiagramsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagramsViewController.swift; sourceTree = "<group>"; };
 		B60DB871299FB2B000E69F81 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		B60DB874299FB57200E69F81 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
+		B60DB876299FB7D600E69F81 /* SensorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorViewController.swift; sourceTree = "<group>"; };
 		B6B1E212299FA6FE00C2F281 /* DFD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DFD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B1E215299FA6FE00C2F281 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6B1E217299FA6FE00C2F281 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 				B60DB86F299FB0DF00E69F81 /* DiagramsViewController.swift */,
 				B60DB871299FB2B000E69F81 /* DataViewController.swift */,
 				B60DB874299FB57200E69F81 /* ProcessViewController.swift */,
+				B60DB876299FB7D600E69F81 /* SensorViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				B6B1E21A299FA6FE00C2F281 /* ViewController.swift in Sources */,
 				B60DB870299FB0DF00E69F81 /* DiagramsViewController.swift in Sources */,
 				B60DB875299FB57200E69F81 /* ProcessViewController.swift in Sources */,
+				B60DB877299FB7D600E69F81 /* SensorViewController.swift in Sources */,
 				B6B1E216299FA6FE00C2F281 /* AppDelegate.swift in Sources */,
 				B60DB86E299FADC600E69F81 /* DataflowControl.swift in Sources */,
 				B6B1E218299FA6FE00C2F281 /* SceneDelegate.swift in Sources */,
