@@ -5,7 +5,7 @@
 import Foundation
 
 // ------------------------------------------------------------------------------------------------
-func readStringFromFile(filename: String) -> String?
+func readStringFromFile(_ filename: String) -> String?
 {
     var contents : String?
         

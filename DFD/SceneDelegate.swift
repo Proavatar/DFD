@@ -48,7 +48,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     // --------------------------------------------------------------------------------------------
-
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
     {
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
