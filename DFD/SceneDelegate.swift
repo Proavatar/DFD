@@ -47,6 +47,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    // --------------------------------------------------------------------------------------------
+
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>)
+    {
+        let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        
+        for context in URLContexts
+        {
+            let url = context.url
+            let filename = url.lastPathComponent
+            let fileURL = dir.appendingPathComponent(url.lastPathComponent)
+            
+            do
+            {
+                try FileManager.default.copyItem(at: url, to: fileURL)
+            }
+            catch
+            {
+                print( "ERROR: failed copying file \(filename)!" )
+            }
+        }
+        
+        NotificationCenter.default.post( name: Notification.Name("Diagram added"), object: nil)
+    }
 
 }
 
