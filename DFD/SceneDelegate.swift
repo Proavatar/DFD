@@ -61,6 +61,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             do
             {
                 try FileManager.default.copyItem(at: url, to: fileURL)
+                try FileManager.default.removeItem(atPath: url.path)
             }
             catch
             {
