@@ -52,6 +52,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     {
         let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         
+        var dfdFiles   : Int = 0
+        var jsonlFiles : Int = 0
+        
         for context in URLContexts
         {
             let url = context.url
@@ -60,16 +63,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             
             do
             {
-                try FileManager.default.copyItem(at: url, to: fileURL)
-                try FileManager.default.removeItem(atPath: url.path)
+                try FileManager.default.moveItem(at: url, to: fileURL)
             }
             catch
             {
                 print( "ERROR: failed copying file \(filename)!" )
+                continue
             }
+            
+            if filename.hasSuffix(".dfd") { dfdFiles   += 1 }
+            else                          { jsonlFiles += 1 }
         }
         
-        NotificationCenter.default.post( name: Notification.Name("Diagram added"), object: nil)
+        if dfdFiles > 0
+        {
+            NotificationCenter.default.post( name: Notification.Name("Diagram added"), object: nil)
+        }
+        if jsonlFiles > 0
+        {
+            NotificationCenter.default.post( name: Notification.Name("Data file added"), object: nil)
+        }
     }
 
 }
