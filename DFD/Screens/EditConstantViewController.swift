@@ -51,6 +51,7 @@ class EditConstantViewController: UIViewController
     func setConstantValue()
     {
         setValueFromString( value: &constant.value, string: valueTextView.text! )
+        dataflowControl.diagram.setConstant( label:constant.label, newValue: constant.value )
     }
 
 }
